@@ -1,0 +1,27 @@
+/* The header of the resources groups list has only one column which always occupies the whoile horizontal space.
+   We don't want to show a separator line to the right.
+*/
+.scrollview.outlineview.resourcesgroups td {
+	border-right: 0px;
+}
+
+/* We don't show alternating rows inside the resources groups outline. */
+.resourcesgroups tr {
+	background-color: transparent !important;
+}
+
+/* ReactivateResourceGroups by deleting the following rules */
+
+.splitview.vertical:has(.resourcesgroups) .part .splitter {
+    min-width: 0px !important;
+    width: 0px !important;
+}
+
+.splitview.vertical:has(.resourcesgroups) .part .splitter.bold {
+    border-right: 0px !important;
+}
+
+.splitview.vertical:has(.resourcesgroups) .part .splitter .effectiveSplitter {
+    display: none !important;
+}
+
